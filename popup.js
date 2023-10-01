@@ -36,3 +36,13 @@ document.addEventListener('DOMContentLoaded', function () {
     clearButton.addEventListener('click', clearCopiedTexts);
   });
   
+  document.getElementById('refreshButton').addEventListener('click', function () {
+    // Get the current active tab.
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+      if (tabs.length > 0) {
+        const tab = tabs[0];
+        // Refresh the current tab.
+        chrome.tabs.reload(tab.id);
+      }
+    });
+  });

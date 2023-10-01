@@ -1,6 +1,8 @@
 # CopyCache - Clipboard History Extension
 
-CopyCache is a browser extension for Google Chrome that helps you keep track of your clipboard history. It stores the text you copy and allows you to access and reuse previously copied content easily.
+CopyCache is a browser extension for Google Chrome that helps you keep track of your clipboard history. It stores the text you copy and allows you to access and reuse previously copied content easily. 
+
+
 
 ## Features
 
