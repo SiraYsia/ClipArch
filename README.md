@@ -3,7 +3,6 @@
 CopyCache is a browser extension for Google Chrome that helps you keep track of your clipboard history. It stores the text you copy and allows you to access and reuse previously copied content easily. 
 
 
-
 ## Features
 
 - **Clipboard History:** Keeps a record of the text you copy.
@@ -29,11 +28,3 @@ To use CopyCache, follow these steps:
 ## Instructions
 
 As you copy text, it will be appended to your history list. If you wish to clear your copied text history, click on the "Clear History" button provided in the popup.
-
-Enjoy using CopyCache to manage your clipboard history and easily access previously copied text items.
-
-
-## Contributing
-
-Contributions are welcome! If you have ideas for improvements, new features, or bug fixes, please open an issue or submit a pull request. 
-
