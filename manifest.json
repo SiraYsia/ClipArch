@@ -1,28 +1,63 @@
 {
-    "manifest_version": 3,
-    "name": "CopyCache",
-    "version": "1.0",
-    "permissions": [
-        "activeTab",
-        "clipboardWrite", 
-        "clipboardRead",
-        "storage"
-      ],
-      
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "content_scripts": [
-        {
-          "matches": ["<all_urls>"],
-          "js": ["content.js"],
-          "run_at": "document_start"
-        }
-    ],
-    
-      
-    "background": {
-      "service_worker": "background.js"
+  "manifest_version": 3,
+  "name": "CopyCache Pro",
+  "version": "2.0.0",
+  "description": "Advanced clipboard manager with smart features for developers",
+  "permissions": [
+    "activeTab",
+    "clipboardWrite",
+    "clipboardRead",
+    "storage",
+    "unlimitedStorage",
+    "commands",
+    "scripting",
+    "nativeMessaging",
+    "tabs",
+    "background"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "*://*.google.com/*",
+    "chrome://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
     }
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "commands": {
+    "paste_last": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+V",
+        "mac": "Command+Shift+V"
+      },
+      "description": "Paste last copied item"
+    },
+    "show_popup": {
+      "suggested_key": {
+        "default": "Alt+Shift+V"
+      },
+      "description": "Show clipboard history"
+    },
+    "capture_selection": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+C",
+        "mac": "Command+Shift+C"
+      },
+      "description": "Capture current selection"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
   }
-  
+}

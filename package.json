@@ -1,0 +1,36 @@
+{
+  "name": "copycache-pro",
+  "version": "2.0.0",
+  "description": "Advanced clipboard manager for Chrome",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "crypto-js": "^4.2.0",
+    "katex": "^0.16.20",
+    "lucide-react": "^0.263.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-syntax-highlighter": "^15.6.1",
+    "tailwindcss": "^3.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-typescript": "^7.23.0",
+    "@types/chrome": "^0.0.293",
+    "@types/crypto-js": "^4.2.2",
+    "@types/katex": "^0.16.7",
+    "babel-loader": "^9.1.3",
+    "copy-webpack-plugin": "^11.0.0",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
